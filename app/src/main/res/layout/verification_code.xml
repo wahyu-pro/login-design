@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fpasswd"
+    android:padding="7dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <TextView
+        android:id="@+id/insertCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="Verify Phone"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_back_code"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.443"
+        app:layout_constraintStart_toEndOf="@+id/iv_back_code"
+        app:layout_constraintTop_toTopOf="@+id/iv_back_code"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/iv_back_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="backToPhone"
+        android:layout_alignBottom="@+id/insertCode"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/ic_baseline_arrow_back_24" />
+
+    <com.alimuzaffar.lib.pin.PinEntryEditText
+        android:id="@+id/txt_pin_entry"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/insertCode"
+        android:cursorVisible="false"
+        android:digits="1234567890"
+        android:inputType="number"
+        android:layoutDirection="ltr"
+        android:maxLength="4"
+        android:textIsSelectable="false"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/code_is_sent"
+        app:layout_constraintVertical_bias="0.076"
+        app:pinAnimationType="fromBottom"
+        app:pinTextBottomPadding="20dp" />
+
+    <TextView
+        android:id="@+id/tv_enter_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tv_notes"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/txt_pin_entry"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/txt_pin_entry"
+        app:layout_constraintTop_toBottomOf="@+id/txt_pin_entry"
+        app:layout_constraintVertical_bias="0.064" />
+
+    <TextView
+        android:id="@+id/code_is_sent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Code is send to 0838 1234 5679"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/insertCode"
+        app:layout_constraintVertical_bias="0.054"
+        tools:layout_editor_absoluteX="7dp" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:background="@drawable/bg_button"
+        android:text="Verifiy Code"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/send_code"
+        app:layout_constraintVertical_bias="0.794"
+        tools:layout_editor_absoluteX="16dp" />
+
+    <TextView
+        android:id="@+id/send_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/request_again"
+        android:textAlignment="textEnd"
+        android:textColor="@color/colorSend"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/txt_pin_entry"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/tv_enter_code"
+        app:layout_constraintTop_toBottomOf="@+id/tv_enter_code"
+        app:layout_constraintVertical_bias="0.015" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

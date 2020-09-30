@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">DesignLogin</string>
+    <string name="tv_continue">Continue with Phone</string>
+    <string name="tv_diigt">You\'ll receive a 4 digit code \n to verify next</string>
+    <string name="hint_phone">Enter your phone number</string>
+    <string name="next">Next</string>
+    <string name="tv_notes">enter the code that has been\nsent to the email</string>
+    <string name="request_again">Request again</string>
+</resources>
